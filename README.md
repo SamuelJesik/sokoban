@@ -82,6 +82,20 @@ Sokoban Solver je projekt na riešenie Sokoban hádaniek s použitím Prologu a 
     python python/main.py ALEBO iba runnuť main.py v nejakom IDE
     ```
 
+### Riešenie problémov so spustením SWI-Prologu
+
+Ak sa vám nepodarí spustiť Prolog solver, uistite sa, že cesta k `swipl.exe` v súbore `prolog_executor.py` je správna.
+
+Otvorte súbor `prolog_executor.py` a vyhľadajte nasledujúci riadok a nastavte správnu cestu k Vášmu prologu:
+
+```python
+cmd = [
+    "C:/Program Files/swipl/bin/swipl.exe",
+    "-g",
+    f"{format_consults(modules)}, solve_bfs, halt."
+]
+```
+
 
 4. Po spustení sa zobrazí výber mapy. Šípkami hore/dole vyberte požadovanú mapu a stlačte **Enter**, aby ste ju načítali.
 
